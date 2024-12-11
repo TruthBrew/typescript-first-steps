@@ -20,7 +20,7 @@ export const toggleModal = (click) => {
 };
 
 // Open modal
-const openModal = (modal) => {
+const openModal = (/** @type {HTMLElement} */ modal) => {
     const { documentElement: html } = document;
     const scrollbarWidth = getScrollbarWidth();
     if (scrollbarWidth) {
@@ -32,10 +32,10 @@ const openModal = (modal) => {
 };
 
 // Close modal
-const closeModal = (modal) => {
+const closeModal = (/** @type {HTMLElement} */ modal) => {
     const { documentElement: html } = document;
-    html.classlist.remove(isOpenClass);
-    html.dataset.modal = null;
+    html.classList.remove(isOpenClass);
+    html.dataset.modal = modal.id;
     modal.close();
     html.style.removeProperty(scrollbarWidthCssVar);
 

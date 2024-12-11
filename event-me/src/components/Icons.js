@@ -12,8 +12,3 @@ export const TypeScript = typescript;
 export const Vite = vite;
 export const Pico = pico;
 export const Calendar = calendar;
-
-
-
-
-
